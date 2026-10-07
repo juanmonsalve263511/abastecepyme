@@ -1,0 +1,24 @@
+{
+  "elementos": [
+    { "id": "PROV-MADERA", "nombre": "Maderas del Norte", "tipo": "proveedor" },
+    { "id": "PROV-FERRE", "nombre": "Ferretería Central", "tipo": "proveedor" },
+    { "id": "PROV-ACAB", "nombre": "Acabados Andinos", "tipo": "proveedor" },
+    { "id": "INS-MADERA", "nombre": "Tablero de madera", "tipo": "insumo" },
+    { "id": "INS-TORNILLOS", "nombre": "Tornillos", "tipo": "insumo" },
+    { "id": "INS-BARNIZ", "nombre": "Barniz", "tipo": "insumo" },
+    { "id": "INS-TELA", "nombre": "Tela de tapicería", "tipo": "insumo" },
+    { "id": "PROD-MESA", "nombre": "Mesa de trabajo", "tipo": "producto" },
+    { "id": "PROD-ESTANTE", "nombre": "Estante modular", "tipo": "producto" }
+  ],
+  "dependencias": [
+    { "origen": "PROV-MADERA", "destino": "INS-MADERA" },
+    { "origen": "PROV-FERRE", "destino": "INS-TORNILLOS" },
+    { "origen": "PROV-ACAB", "destino": "INS-BARNIZ" },
+    { "origen": "INS-MADERA", "destino": "PROD-MESA" },
+    { "origen": "INS-MADERA", "destino": "PROD-ESTANTE" },
+    { "origen": "INS-TORNILLOS", "destino": "PROD-MESA" },
+    { "origen": "INS-TORNILLOS", "destino": "PROD-ESTANTE" },
+    { "origen": "INS-BARNIZ", "destino": "PROD-MESA" },
+    { "origen": "INS-BARNIZ", "destino": "PROD-ESTANTE" }
+  ]
+}
