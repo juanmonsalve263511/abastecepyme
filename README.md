@@ -21,7 +21,7 @@ npm start
 
 En Windows también puede abrir `Iniciar.cmd`. El archivo inicia el servidor y muestra la dirección para abrir en el navegador. Mantenga esa ventana abierta mientras utiliza la aplicación. Si una vista previa de esta entrega ya usa el puerto 3000, utilícela o deténgala antes de iniciar otra instancia.
 
-El primer inicio carga 9 elementos y 9 dependencias sintéticas desde `data/ejemplo.json`. Se guardan en `data/catalogo.json`; los siguientes inicios conservan ese catálogo. El ZIP no incluye datos creados durante las pruebas.
+El primer inicio carga 38 elementos (8 proveedores, 16 insumos y 14 productos) y 92 dependencias sintéticas desde `data/ejemplo.json`. Se guardan en `data/catalogo.json`; los siguientes inicios conservan ese catálogo. El ZIP no incluye datos creados durante las pruebas.
 
 ### Otro puerto o archivo de datos
 
@@ -38,6 +38,8 @@ Abra el puerto elegido. Ambas variables son opcionales; `DATA_FILE` se resuelve 
 ### Volver al ejemplo sin perder los datos registrados
 
 Detenga el servidor. Mueva `data/catalogo.json` a un archivo de respaldo con un nombre nuevo, por ejemplo `data/catalogo-respaldo-01.json`. Al reiniciar se crea un catálogo nuevo a partir de `data/ejemplo.json`. No reemplace un respaldo existente. Los datos de demostración y las pruebas están separados.
+
+El catálogo ampliado se describe en [Catálogo de muebles](docs/catalogo-muebles.md). Cambiar el ejemplo no modifica un catálogo persistente existente; la ampliación de la instancia local se realizó mediante la API, conservando sus registros previos.
 
 ## Uso de la interfaz
 
@@ -83,7 +85,7 @@ Ejemplo parcial:
   "PROV-MADERA": ["INS-MADERA"],
   "INS-MADERA": ["PROD-MESA", "PROD-ESTANTE"],
   "PROD-MESA": [],
-  "INS-TELA": []
+  "INS-FIELTRO": []
 }
 ```
 
@@ -192,4 +194,3 @@ docs/aceptacion.md            Casos de aceptación y guion de demostración
 docs/bitacora-ia.md           Registro de asistencia de IA de esta entrega
 Iniciar.cmd                  Inicio en Windows
 ```
-
