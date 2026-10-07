@@ -32,3 +32,7 @@ La IA produjo el código y los documentos iniciales y ejecutó las comprobacione
 - Declaración de uso de IA conforme a las reglas del curso.
 
 Esta bitácora se incluye como base para mantener trazabilidad desde la primera entrega; la documentación integral de IA se solicita expresamente en el Feature 4.
+
+## Ampliación solicitada del catálogo
+
+A petición del usuario se añadieron doce productos acordes con un fabricante de muebles, cinco proveedores, doce insumos y 83 relaciones. Se preservaron los registros existentes, incluido «Metro 20 M», y se actualizó el ejemplo distribuible. Se verificaron integridad del grafo, persistencia y consulta en la interfaz. Los nombres de proveedores y las dependencias constituyen un escenario sintético para el taller.

@@ -2,12 +2,12 @@
 
 Verificación realizada el **6 de octubre de 2026**, con Node.js **24.14.1** en Windows y la interfaz ejecutada en el navegador integrado de Codex.
 
-## Resultado registrado
+## Resultado registrado de la versión original
 
 - `npm run check`: sin errores de sintaxis.
 - `npm test`: **21 pruebas, 21 aprobadas, 0 fallidas**.
 - Pruebas de interfaz realizadas mediante interacción real con formularios, selectores y nodos; no están automatizadas dentro de `npm test`.
-- Datos de prueba de navegador separados del catálogo final. La versión que se entrega inicia con 9 elementos y 9 dependencias del ejemplo.
+- Datos de prueba de navegador separados del catálogo final. La versión original iniciaba con 9 elementos y 9 dependencias. El ejemplo ampliado contiene 38 elementos y 92 dependencias.
 
 ## Casos automáticos
 
@@ -50,7 +50,7 @@ La revisión se limita a estos casos y tamaños. No equivale a una auditoría ex
 ## Guion sugerido de demostración, 4–6 minutos
 
 1. **Contexto y orientación (45 s).** Explicar que el catálogo permite registrar requisitos. Mostrar `Maderas del Norte → Tablero de madera → Mesa de trabajo`. Leer una arista con una frase del negocio.
-2. **Elementos iniciales (30 s).** Mostrar los tres tipos y la tela de tapicería sin conexiones. Explicar que un nodo aislado sigue siendo un elemento válido.
+2. **Elementos iniciales (30 s).** Mostrar los tres tipos y el fieltro protector sin conexiones. Explicar que un nodo aislado sigue siendo un elemento válido.
 3. **Nuevo elemento (45 s).** Registrar `INS-PEGAMENTO`, nombre «Pegamento para madera», tipo «Insumo». Verificar su aparición. Si ese ID ya fue utilizado, elegir uno nuevo.
 4. **Nueva dependencia (45 s).** Elegir el pegamento como requisito y la mesa como dependiente. Leer la frase y registrar. Mostrar la flecha y la fila de la tabla.
 5. **Duplicados y entrada inválida (45 s).** Repetir la relación para observar el rechazo. Mostrar una respuesta 400 o 404 con los ejemplos de API que siguen.
@@ -87,3 +87,9 @@ Los tres ejemplos deben dejar el catálogo intacto. La suite automática comprue
 ## Evidencia visual
 
 `vista-catalogo.png` contiene una captura de la aplicación ejecutada con los datos sintéticos iniciales. El dibujo muestra las dependencias almacenadas; no certifica viabilidad ni representa un orden de producción calculado.
+
+## Verificación de la ampliación del catálogo
+
+Se incorporaron 12 productos, 5 proveedores, 12 insumos y 83 dependencias. Se validaron los datos con el modelo del aplicativo, la existencia de extremos, las relaciones proveedor → insumo → producto y la presencia de requisitos en todos los productos. Se comprobó la igualdad entre los datos de la API y el archivo persistido y la conservación de los registros anteriores.
+
+El ejemplo distribuible contiene 38 elementos y 92 relaciones. La instancia local contiene 39 elementos porque conserva el insumo del usuario «Metro 20 M»: 8 proveedores, 17 insumos y 14 productos. En el navegador se verificaron los totales y la selección del banco tapizado con sus siete requisitos directos. Las evidencias y pruebas anteriores corresponden a la versión original; el código funcional no cambió durante esta ampliación.

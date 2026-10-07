@@ -17,7 +17,7 @@ El Feature 1 entrega registro, listado, validación y visualización. Compras pu
 | Crear/listar elementos con tipo e identificador único | Catálogo `Map`, POST/GET de elementos y formulario/lista. ID único global. | `src/catalog.js`, `src/server.js`, formulario Nuevo elemento y tabla Elementos registrados. |
 | Registrar dependencias solo entre elementos válidos | Se valida formato y existencia de ambos extremos antes de mutar. Selectores construidos a partir del catálogo. | Pruebas de extremo inexistente, errores 400/404. |
 | Validar relaciones repetidas y datos mal formados | `Set` por origen, esquema de campos, reglas de ID/nombre/tipo y JSON. | Pruebas de duplicados, solicitudes inválidas y estado intacto. |
-| Mostrar la red mediante API e interfaz mínima | GET `/api/grafo`, SVG con flechas y tablas equivalentes. | Red de ejemplo de 9 nodos y 9 aristas; nodos aislados visibles. |
+| Mostrar la red mediante API e interfaz mínima | GET `/api/grafo`, SVG con flechas y tablas equivalentes. | Red de ejemplo de 38 nodos y 92 aristas; nodos aislados visibles. |
 | Justificar dirección y representación principal | Requisito → dependiente, listas de adyacencia. | README y secciones 3–5 de este documento. |
 
 La persistencia, el nombre legible, la normalización, las pruebas de Feature 1 y los materiales de demostración son decisiones de apoyo a la entrega; el brief no los especifica con ese nivel de detalle.
@@ -65,9 +65,9 @@ Para sostener el quinto punto, el almacén opera sobre una copia candidata. Publ
 
 ## 7. Escenario de demostración
 
-Se modela un pequeño fabricante de muebles con tres proveedores, cuatro insumos y dos productos. La madera, los tornillos y el barniz son requisitos compartidos de una mesa y un estante. La tela de tapicería está registrada sin conexiones.
+Se modela un pequeño fabricante de muebles con ocho proveedores, dieciséis insumos y catorce productos. La ampliación incorpora doce productos, cinco proveedores y doce insumos. La tela de tapicería ahora tiene proveedor y se utiliza en el banco tapizado. El fieltro protector se conserva como insumo de reserva sin conexiones para demostrar nodos aislados. El detalle está en `catalogo-muebles.md`.
 
-Las nueve aristas iniciales se pueden leer así:
+Se conservan las nueve aristas originales, descritas a continuación, y se agregan 83 relaciones:
 
 | Requisito | Dependiente | Interpretación |
 |---|---|---|
