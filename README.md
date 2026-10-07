@@ -193,4 +193,3 @@ docs/bitacora-ia.md           Registro de asistencia de IA de esta entrega
 Iniciar.cmd                  Inicio en Windows
 ```
 
-El software, sus decisiones y los resultados deben ser revisados por el estudiante antes de presentarlos. La bitácora identifica qué se elaboró con asistencia de IA y qué debe completar personalmente el equipo.
