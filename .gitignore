@@ -1,0 +1,3 @@
+data/catalogo.json
+data/*.tmp
+*.log
